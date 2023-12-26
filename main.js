@@ -17,6 +17,7 @@ btn.addEventListener("click", () => {
         setTimeout(() => {
             btn.classList.remove("state-loading");
             btn.classList.add("state-disable");
+            btn.querySelector("button").disabled = true;
         }, 2000)
     } catch (err) {
         console.log("An Error Occured: " + err);
@@ -25,8 +26,8 @@ btn.addEventListener("click", () => {
 
 
 
-inpContainer.forEach((e)=>{
-    e.addEventListener("mousemove",()=>{
+inpContainer.forEach((e) => {
+    e.addEventListener("mousemove", () => {
         e.querySelector("input").focus();
     })
 })

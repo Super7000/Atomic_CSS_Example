@@ -17,7 +17,7 @@
     display: inline-flex;
     flex-direction: row;
     align-items: center;
-    gap:  var(--half-rem);
+    gap: var(--half-rem);
     border-radius: var(--border-radius);
     transition: 0.3s;
     background: var(--bg, var(--white-color));
@@ -39,8 +39,23 @@
     display: block;
 }
 
+.btn button {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: var(--one-rem);
+}
+
+
+
+
+
 .btn.content-icon-only {
-    padding:  var(--point-75rem) !important;
+    padding: var(--point-75rem) !important;
 }
 
 .btn.content-icon-only .search-icon {
@@ -59,11 +74,11 @@
 }
 
 .btn.size-large {
-    padding:  var(--half-rem) var(--one-rem);
+    padding: var(--half-rem) var(--one-rem);
 }
 
 .btn.size-small {
-    padding: 0.0625rem  var(--half-rem);
+    padding: 0.0625rem var(--half-rem);
 }
 
 
@@ -109,13 +124,13 @@
 .btn.type-link {
     --hover-and-focus-text-color: var(--hover-bg-and-text-color);
     --pressed-text-color: var(--blue-bg-and-text-color);
-    --border-color:  var(--gray-border-color);
+    --border-color: var(--gray-border-color);
 }
 
 .btn.type-primary,
 .btn.type-default,
 .btn.type-dashed {
-    --disable-bg:  var(--disable-bg-color);
+    --disable-bg: var(--disable-bg-color);
 }
 
 
@@ -165,12 +180,16 @@
     --pressed-text-color: var(--text-color);
     --pressed-bg: var(--bg);
     --hover-bg: var(--bg);
-    background: var(--disable-bg)
+    background: var(--disable-bg);
+}
+
+.btn.state-disable button {
+    cursor: auto;
 }
 
 .btn.type-primary.state-disable {
     --border-style: solid;
-    --border-color:  var(--gray-border-color);
+    --border-color: var(--gray-border-color);
 }
 
 .btn.type-dashed.state-disable,
@@ -199,11 +218,11 @@
 .input-container {
     display: grid;
     width: 20rem;
-    padding:  var(--half-rem)  var(--point-75rem);
+    padding: var(--half-rem) var(--point-75rem);
     align-items: center;
     gap: 0.625rem;
     border-radius: var(--border-radius);
-    border: 1px solid var(--inp-border-color,  var(--gray-border-color));
+    border: 1px solid var(--inp-border-color, var(--gray-border-color));
     background: var(--inp-box-bg, var(--white-color));
     box-shadow: 0px 0px 4px 0px var(--inp-box-shadow-color, none);
     transition: 0.3s;
@@ -224,7 +243,7 @@
 }
 
 .input-container .prefix-suffix-text {
-    font-size:  var(--font-size-point-875rem);
+    font-size: var(--font-size-point-875rem);
     display: none;
 }
 
@@ -232,7 +251,7 @@
 
 
 .input-container.size-large {
-    padding:  var(--half-rem)  var(--point-75rem);
+    padding: var(--half-rem) var(--point-75rem);
 }
 
 .input-container.size-large input::placeholder {
@@ -240,19 +259,19 @@
 }
 
 .input-container.size-default {
-    padding: 0.3125rem  var(--point-75rem);
+    padding: 0.3125rem var(--point-75rem);
 }
 
 .input-container.size-default input::placeholder {
-    font-size:  var(--font-size-point-875rem);
+    font-size: var(--font-size-point-875rem);
 }
 
 .input-container.size-small {
-    padding: 0.0625rem  var(--half-rem);
+    padding: 0.0625rem var(--half-rem);
 }
 
 .input-container.size-small .prefix-suffix-text {
-    font-size:  var(--point-75rem);
+    font-size: var(--point-75rem);
 }
 
 
@@ -314,11 +333,11 @@
 
 
 .input-container.state-disable {
-    --inp-box-bg:  var(--disable-bg-color);
-    --inp-border-color:  var(--gray-border-color);
+    --inp-box-bg: var(--disable-bg-color);
+    --inp-border-color: var(--gray-border-color);
     --inp-box-shadow-color: none !important;
 }
 
 .input-container.state-disable input {
-    background:  var(--disable-bg-color);
+    background: var(--disable-bg-color);
 }
