@@ -22,7 +22,7 @@ body {
     margin-top: 2rem;
     position: relative;
     left: 50%;
-    transform: translate(-50%,0);
+    transform: translate(-50%, 0);
     font-size: 1.2rem;
 }
 
@@ -30,5 +30,5 @@ body {
     position: relative;
     margin-top: 1rem;
     left: 50%;
-    transform: translate(-50%,0);
+    transform: translate(-50%, 0);
 }

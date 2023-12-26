@@ -1,5 +1,6 @@
-let btn = document.querySelector(".btn");
-document.querySelector(".btn.state-default").addEventListener("click", () => {
+const btn = document.querySelector(".btn");
+btn.addEventListener("click", () => {
+    if (btn.classList.toString().indexOf("state-default") == -1) return;
     try {
         btn.classList.remove("state-default");
         btn.classList.add("state-loading");

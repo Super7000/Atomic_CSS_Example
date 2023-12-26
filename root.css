@@ -1,14 +1,24 @@
-* {
+:root {
     --white-color: #fff;
     --black-color: #000;
+    --border-radius: 0.125rem;
+    --blue-border-color: #1890FF;
+    --blue-bg-and-text-color: #096DD9;
+    --hover-bg-and-text-color: #40A9FF;
+    --one-rem: 1rem;
+    --half-rem: 0.5rem;
+    --point-75rem: 0.75rem;
+    --disable-bg-color: #F5F5F5;
+    --gray-border-color: #D9D9D9;
+    --font-size-point-875rem: 0.875rem;
 }
 
 .btn {
     display: inline-flex;
     flex-direction: row;
     align-items: center;
-    gap: 0.5rem;
-    border-radius: 0.125rem;
+    gap:  var(--half-rem);
+    border-radius: var(--border-radius);
     transition: 0.3s;
     background: var(--bg, var(--white-color));
     border: 1px var(--border-style, none) var(--border-color, none);
@@ -16,8 +26,8 @@
 }
 
 .btn svg {
-    width: 1rem;
-    height: 1rem;
+    width: var(--one-rem);
+    height: var(--one-rem);
     display: none;
 }
 
@@ -30,7 +40,7 @@
 }
 
 .btn.content-icon-only {
-    padding: 0.75rem !important;
+    padding:  var(--point-75rem) !important;
 }
 
 .btn.content-icon-only .search-icon {
@@ -45,24 +55,24 @@
 
 
 .btn.size-default {
-    padding: 0.3125rem 1rem;
+    padding: 0.3125rem var(--one-rem);
 }
 
 .btn.size-large {
-    padding: 0.5rem 1rem;
+    padding:  var(--half-rem) var(--one-rem);
 }
 
 .btn.size-small {
-    padding: 0.0625rem 0.5rem;
+    padding: 0.0625rem  var(--half-rem);
 }
 
 
 
 
 .btn.type-primary {
-    --bg: #1890FF;
-    --hover-bg: #40A9FF;
-    --pressed-bg: #096DD9;
+    --bg: var(--blue-border-color);
+    --hover-bg: var(--hover-bg-and-text-color);
+    --pressed-bg: var(--blue-bg-and-text-color);
     --text-color: var(--white-color);
     --hover-and-focus-text-color: var(--text-color);
     --pressed-text-color: var(--text-color);
@@ -91,21 +101,21 @@
     --hover-bg: none;
     --pressed-bg: none;
     --border-style: none;
-    --text-color: #1890FF;
+    --text-color: var(--blue-border-color);
 }
 
 .btn.type-default,
 .btn.type-dashed,
 .btn.type-link {
-    --hover-and-focus-text-color: #40A9FF;
-    --pressed-text-color: #096DD9;
-    --border-color: #D9D9D9;
+    --hover-and-focus-text-color: var(--hover-bg-and-text-color);
+    --pressed-text-color: var(--blue-bg-and-text-color);
+    --border-color:  var(--gray-border-color);
 }
 
 .btn.type-primary,
 .btn.type-default,
 .btn.type-dashed {
-    --disable-bg: #F5F5F5;
+    --disable-bg:  var(--disable-bg-color);
 }
 
 
@@ -160,7 +170,7 @@
 
 .btn.type-primary.state-disable {
     --border-style: solid;
-    --border-color: #D9D9D9;
+    --border-color:  var(--gray-border-color);
 }
 
 .btn.type-dashed.state-disable,
@@ -189,26 +199,32 @@
 .input-container {
     display: grid;
     width: 20rem;
-    padding: 0.5rem 0.75rem;
+    padding:  var(--half-rem)  var(--point-75rem);
     align-items: center;
     gap: 0.625rem;
-    border-radius: 0.125rem;
-    border: 1px solid var(--Gray-gray-5, #D9D9D9);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--inp-border-color,  var(--gray-border-color));
     background: var(--inp-box-bg, var(--white-color));
+    box-shadow: 0px 0px 4px 0px var(--inp-box-shadow-color, none);
+    transition: 0.3s;
 }
-.input-container input{
+
+.input-container input {
     outline: none;
     border: none;
 }
-.input-container input::placeholder{
+
+.input-container input::placeholder {
     font-family: Roboto;
     color: #8C8C8C;
 }
-.input-container svg{
+
+.input-container svg {
     display: none;
 }
-.input-container .prefix-suffix-text{
-    font-size: 0.875rem;
+
+.input-container .prefix-suffix-text {
+    font-size:  var(--font-size-point-875rem);
     display: none;
 }
 
@@ -216,24 +232,27 @@
 
 
 .input-container.size-large {
-    padding: 0.5rem 0.75rem;
+    padding:  var(--half-rem)  var(--point-75rem);
 }
-.input-container.size-large input::placeholder{
-    font-size: 1rem;
+
+.input-container.size-large input::placeholder {
+    font-size: var(--one-rem);
 }
 
 .input-container.size-default {
-    padding: 0.3125rem 0.75rem;
+    padding: 0.3125rem  var(--point-75rem);
 }
-.input-container.size-default input::placeholder{
-    font-size: 0.875rem;
+
+.input-container.size-default input::placeholder {
+    font-size:  var(--font-size-point-875rem);
 }
 
 .input-container.size-small {
-    padding: 0.0625rem 0.5rem;
+    padding: 0.0625rem  var(--half-rem);
 }
-.input-container.size-small .prefix-suffix-text{
-    font-size: 0.75rem;
+
+.input-container.size-small .prefix-suffix-text {
+    font-size:  var(--point-75rem);
 }
 
 
@@ -243,37 +262,63 @@
     grid-template-columns: auto;
 }
 
-.input-container.type-icon-left{
-    grid-template-columns: 1rem auto;
+.input-container.type-icon-left {
+    grid-template-columns: var(--one-rem) auto;
 
 }
-.input-container.type-icon-left .person-icon.left{
+
+.input-container.type-icon-left .person-icon.left {
     display: block;
 }
 
-.input-container.type-icon-right{
-    grid-template-columns: auto 1rem;
+.input-container.type-icon-right {
+    grid-template-columns: auto var(--one-rem);
 
 }
-.input-container.type-icon-right .person-icon.right{
+
+.input-container.type-icon-right .person-icon.right {
     display: block;
 }
 
-.input-container.type-two-icons{
-    grid-template-columns: 1rem auto 1rem;
+.input-container.type-two-icons {
+    grid-template-columns: var(--one-rem) auto var(--one-rem);
 
 }
-.input-container.type-two-icons .person-icon.left, .input-container.type-two-icons .about-icon{
+
+.input-container.type-two-icons .person-icon.left,
+.input-container.type-two-icons .about-icon {
     display: block;
 }
 
-.input-container.type-prefix-suffix{
+.input-container.type-prefix-suffix {
     grid-template-columns: 2.1rem auto 2.1rem;
 
 }
-.input-container.type-prefix-suffix .prefix-suffix-text{
+
+.input-container.type-prefix-suffix .prefix-suffix-text {
     display: block;
 }
 
 
 
+
+.input-container:hover {
+    --inp-border-color: var(--blue-border-color);
+
+}
+
+.input-container:focus-within {
+    --inp-border-color: var(--blue-border-color);
+    --inp-box-shadow-color: rgba(24, 144, 255, 0.50);
+}
+
+
+.input-container.state-disable {
+    --inp-box-bg:  var(--disable-bg-color);
+    --inp-border-color:  var(--gray-border-color);
+    --inp-box-shadow-color: none !important;
+}
+
+.input-container.state-disable input {
+    background:  var(--disable-bg-color);
+}
