@@ -8,9 +8,8 @@ body {
 }
 
 .main-container {
-    width: 25%;
     border-radius: 0.5rem;
-    padding: 5rem 6rem;
+    padding: 1.5rem 2rem;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
     position: absolute;
     left: 50%;
