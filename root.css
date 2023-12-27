@@ -11,6 +11,7 @@
     --disable-bg-color: #F5F5F5;
     --gray-border-color: #D9D9D9;
     --font-size-point-875rem: 0.875rem;
+    --disable-gray-icon-color: #BFBFBF;
 }
 
 .btn {
@@ -340,4 +341,12 @@
 
 .input-container.state-disable input {
     background: var(--disable-bg-color);
+}
+
+.input-container.state-disable input, .input-container.state-disable input:: placeholder {
+    color: var(--disable-gray-icon-color);
+}
+
+.input-container.state-disable svg path {
+    color: var(--disable-gray-icon-color);
 }
