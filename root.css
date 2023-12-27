@@ -343,7 +343,7 @@
     background: var(--disable-bg-color);
 }
 
-.input-container.state-disable input, .input-container.state-disable input:: placeholder {
+.input-container.state-disable input, .input-container.state-disable input::placeholder {
     color: var(--disable-gray-icon-color);
 }
 
