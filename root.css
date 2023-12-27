@@ -348,5 +348,5 @@
 }
 
 .input-container.state-disable svg path {
-    color: var(--disable-gray-icon-color);
+    fill: var(--disable-gray-icon-color);
 }
